@@ -109,8 +109,8 @@ async function getPokemonShuffled(pairs) {
 
     let img = await getPokemonImages(mon.url);
 
-    cards.push({ img, id: mon.name + "_first" });
-    cards.push({ img, id: mon.name + "_second" });
+    cards.push({img});
+    cards.push({img});
   }
 
   shuffle(cards);
@@ -172,7 +172,6 @@ function renderCards(cards) {
     const img = clone.querySelector(".front_face");
 
     img.src = card.img;
-    img.id = card.id;
 
     grid.append(clone);
   }
