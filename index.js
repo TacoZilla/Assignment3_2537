@@ -84,11 +84,16 @@ async function getPokemon() {
   pokemon = data.results;
  
 }
-
+let cache = {};
 async function getPokemonImages(url) {
+  if (cache[url]) return cache[url];
+
   const response = await fetch(url);
   const data = await response.json();
-  return data.sprites.other["official-artwork"].front_default;
+  const image = data.sprites.other["official-artwork"].front_default;
+  cache[url] = image;
+  return image;
+
 
 }
 
