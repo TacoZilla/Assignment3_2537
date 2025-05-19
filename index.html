@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeGame</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div id="master">
+  <div id="utils">
+  <button class="difficulty" value="3">Easy</button>
+  <button class="difficulty" value="6">Medium</button>
+  <button class="difficulty" value="12">Hard</button>
+  <button id="theme"> Change Theme </button>
+  <button id="power-up"> Power Up </button>
+  </div>
+  <div id="controls">
+    <button id="start_game">Start Game</button>
+    <button id="reset_game">Reset Game</button>
+  </div>
+  <div id="stats">
+    <p>Time: <span id="time">0</span></p>
+    <p>Clicks: <span id="clicks">0</span></p>
+    <p>Matches: <span id="matches">0</span></p>
+    <p>Total Pairs: <span id="totalpairs">0</span></p>
+    <p>Pairs Left: <span id="pairsleft">0</span></p>
+  </div>
+  </div>
+  <template id="template" class="template">
+    <div class="card">
+      <img id="" class="front_face" src="" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+  </template>
+  <div id="game_grid">
+
+
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
